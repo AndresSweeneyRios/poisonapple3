@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack --mode=production",
+    "serve": "node serve"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dart-sass": "^1.25.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "shadow-css-loader": "^0.4.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "license": "MIT"
+}
