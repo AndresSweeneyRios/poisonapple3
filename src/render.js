@@ -1,3 +1,38 @@
+export const normalizeComponent = (args) => {
+  if (!Array.isArray(args)) return args
+
+  const tagName = args[0]
+
+  const props = !Array.isArray(args[1]) && typeof args[1] === 'object' ? args[1] : {}
+
+  const children = 
+    Array.isArray(args[1]) ? args[1] :
+    Array.isArray(args[2]) ? args[2] :
+    typeof args[1] === 'string' || typeof args[1] === 'number' ? [args[1]] :
+    typeof args[2] === 'string' || typeof args[2] === 'number' ? [args[2]] :
+    []
+
+  return { tagName, props, children }
+}
+
+export const processComponent = ({ component, existingElement, rerender, newState }) => {
+  const normalized = normalizeComponent (
+    typeof component === 'function' ? component({ render, rerender, newState }) : component
+  )
+
+  if (typeof normalized === 'string' || typeof normalized === 'number' ) {
+    const element = document.createTextNode(normalized)
+
+    return { props: [], children: [], element }
+  } else {
+    const { tagName, props, children } = normalized
+
+    const element = existingElement || document.createElement(tagName)
+  
+    return { props, children, element }
+  }
+}
+
 export const hookProps = (element, props) => {
   for ( const [ key, value ] of Object.entries(props) ) {
     const matchedEvent = key.match(/^on([A-Z][a-z]+)$/)
@@ -16,24 +51,6 @@ export const hookProps = (element, props) => {
     } else {
       element.setAttribute(key, value)
     }
-  }
-}
-
-export const processComponent = ({ component, existingElement, rerender, newState }) => {
-  const normalized = normalizeComponent (
-    typeof component === 'function' ? component({ render, rerender, newState }) : component
-  )
-
-  if (typeof normalized === 'string' || typeof normalized === 'number' ) {
-    const element = document.createTextNode(normalized)
-
-    return { props: [], children: [], element }
-  } else {
-    const { tagName, props, children } = normalized
-
-    const element = existingElement || document.createElement(tagName)
-  
-    return { props, children, element }
   }
 }
 
@@ -88,21 +105,4 @@ export const render = ( component ) => {
   }
 
   return { component, children, props, rerender, renderedChildren, element }
-}
-
-export const normalizeComponent = (args) => {
-  if (!Array.isArray(args)) return args
-
-  const tagName = args[0]
-
-  const props = !Array.isArray(args[1]) && typeof args[1] === 'object' ? args[1] : {}
-
-  const children = 
-    Array.isArray(args[1]) ? args[1] :
-    Array.isArray(args[2]) ? args[2] :
-    typeof args[1] === 'string' || typeof args[1] === 'number' ? [args[1]] :
-    typeof args[2] === 'string' || typeof args[2] === 'number' ? [args[2]] :
-    []
-
-  return { tagName, props, children }
 }
