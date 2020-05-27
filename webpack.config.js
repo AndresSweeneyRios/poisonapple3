@@ -17,16 +17,7 @@ module.exports = () => ({
       {
         test: /\.scss$/i,
         use: [
-          {
-            loader: 'style-loader',
-            options: {
-              insert: element => {
-                requestAnimationFrame(() => {
-                  document.querySelector('#app').shadowRoot.append(element)
-                })
-              }
-            }
-          },
+          'style-loader',
           {
             loader: 'css-loader',
             options: {

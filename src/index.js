@@ -1,5 +1,5 @@
 import '@/scss/global.scss'
 
-import router from './router'
+import { mount } from 'bitt'
 
-router(document.querySelector('#app').attachShadow({ mode: 'open' }))
+mount(document.body, ['h1', 'Hello world!'])

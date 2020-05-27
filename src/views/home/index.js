@@ -5,7 +5,11 @@ export default ({ newState }) => {
     counter: 0
   })
 
-  return ['div', [
+  return ['div', {
+    onMounted () {
+      state.counter++
+    },
+  }, [
     ['p', { class: style.home }, state.counter],
     ['button', { onClick: () => state.counter-- }, '-'],
     ['button', { onClick: () => state.counter++ }, '+'],
