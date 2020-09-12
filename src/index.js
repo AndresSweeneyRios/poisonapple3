@@ -1,5 +1,10 @@
 import '@/scss/global.scss'
 
-import { mount } from 'bitt'
+import { router } from 'bitt'
 
-mount(document.body, ['h1', 'Hello world!'])
+router(document.body, [
+  {
+    regex: /^\/?$/,
+    module: () => import('@/views/home')
+  }
+]).catch(console.error)

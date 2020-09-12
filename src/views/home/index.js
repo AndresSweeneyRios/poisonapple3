@@ -1,17 +1,17 @@
 import style from './home.scss'
 
-export default ({ newState }) => {
+import landing from '@/components/landing'
+
+const home = ({ newState }) => {
   const state = newState({
     counter: 0
   })
 
-  return ['div', {
-    onMounted () {
-      state.counter++
-    },
+  return ['main', {
+    class: style.home,
   }, [
-    ['p', { class: style.home }, state.counter],
-    ['button', { onClick: () => state.counter-- }, '-'],
-    ['button', { onClick: () => state.counter++ }, '+'],
+    landing,
   ]]
 }
+
+export default home

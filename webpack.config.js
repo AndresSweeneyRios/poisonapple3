@@ -28,7 +28,7 @@ module.exports = () => ({
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+        test: /\.(png|jpg|gif|woff|woff2|eot|ttf|otf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -37,6 +37,10 @@ module.exports = () => ({
             },
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: 'raw-loader',
       },
     ],
   },
@@ -47,6 +51,7 @@ module.exports = () => ({
       'config': path.resolve(__dirname, 'config.js'),
       'scss': path.resolve(__dirname, 'src', 'sass'),
       'assets': path.resolve(__dirname, 'src', 'assets'),
+      'icons': path.resolve(__dirname, 'src', 'assets', 'icons'),
     },
     extensions: ['.js'],
   },
