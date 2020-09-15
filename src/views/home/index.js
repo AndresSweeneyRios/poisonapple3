@@ -1,15 +1,13 @@
 import style from './home.scss'
 
 import landing from '@/components/landing'
+import carousel from '@/components/carousel'
 
-const home = ({ newState }) => {
-  const state = newState({
-    counter: 0
-  })
-
+const home = () => {
   return ['main', {
     class: style.home,
   }, [
+    carousel,
     landing,
   ]]
 }

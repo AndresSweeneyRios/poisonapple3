@@ -1,0 +1,40 @@
+.carousel {
+  display: flex;
+  position: fixed;
+  z-index: 0;
+  opacity: 0.15;
+  align-items: flex-start;
+}
+
+@keyframes spin {
+  from {
+    transform: translateY(0%) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translateY(-50%) translate3d(0, 0, 0);
+  }
+}
+
+.column {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  animation: spin 30s infinite;
+  animation-timing-function: linear;
+
+  &:nth-child(even) {
+    animation-direction: reverse;
+  }
+
+  img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-flow: column;
+    object-fit: center;
+    padding: 0px;
+  }
+}

@@ -42,6 +42,11 @@ module.exports = () => ({
         test: /\.svg$/,
         use: 'raw-loader',
       },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
 
@@ -72,5 +77,6 @@ module.exports = () => ({
 
   devServer: {
     port: 3000,
+    host: '0.0.0.0',
   }
 })
