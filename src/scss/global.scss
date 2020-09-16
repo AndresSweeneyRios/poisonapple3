@@ -4,3 +4,28 @@
   box-sizing: border-box;
   font-family: Manrope, sans-serif;
 }
+
+html {
+  --background: rgb(245, 245, 245);
+  --text: rgb(40, 35, 38);
+  --accent: #ff69b4;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  
+  svg {
+    transition: fill 0.1s;
+    fill: white;
+  }
+
+  &:hover {
+    svg {
+      fill: var(--accent);
+    }
+
+    text-decoration: underline;
+  }
+}

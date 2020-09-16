@@ -11,13 +11,13 @@
 }
 
 @mixin lg {
-  @media (max-width: 1400px) {
+  @media (max-width: 1200px) {
     @content;
   }
 }
 
 @mixin xl {
-  @media (min-width: 1400px) {
+  @media (max-width: 1400px) {
     @content;
   }
 }
