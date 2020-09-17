@@ -10,6 +10,10 @@
     padding: 100px;
   }
 
+  @media (max-width: 900px) {
+    padding: 20px;
+  } 
+
   .horizontal {
     display: flex;
     justify-content: center;

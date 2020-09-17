@@ -42,6 +42,7 @@
       color: var(--accent);
       font-size: 18px;
       letter-spacing: 0.25px;
+      margin-top: 0;
     }
 
     li {
@@ -52,4 +53,12 @@
       margin-top: 5px;
     }
   }
+
+  @media (max-width: 900px) {
+    padding: 20px;
+
+    ul {
+      padding-left: 0;
+    }
+  } 
 }
