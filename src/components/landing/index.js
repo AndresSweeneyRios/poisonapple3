@@ -15,7 +15,11 @@ const landing = ['div', {
   ['div', {
     class: styles.horizontal,
   }, [
-    ['img', { src: appleImage }],
+    ['img', {
+      'aria-hidden': true,
+
+      src: appleImage, 
+    }],
 
     ['div', {
       class: styles.vertical,
