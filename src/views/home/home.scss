@@ -3,6 +3,18 @@ body, html {
   background-color: var(--background);
 }
 
+.home > .background {
+  opacity: 0.15;
+  background-image: url(~assets/background.webp);
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .home {
   min-height: 100vh;
 

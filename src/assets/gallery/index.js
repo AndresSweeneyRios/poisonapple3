@@ -1,7 +1,7 @@
 export default [
     "0-lowpoly_apple.webp",
     "0-manzana.webp",
-    "choomah2.png",
+    // "choomah2.png",
     "0-coffeeapple.png",
     "0-trixel_apple.png",
     "0-AppleZkkov.png",
@@ -20,9 +20,9 @@ export default [
     "glitchybg.png",
     "0-pear.webp",
     "heart.png",
-    "pink_space.webp",
+    // "pink_space.webp",
     "reddishsquarebg.png",
-    "corgi_levels.png",
+    // "corgi_levels.png",
     "triskele.png",
     "tulip_large.png",
     "paint_drip.png",
@@ -32,6 +32,6 @@ export default [
     "lowpoly_applemosh.png",
     "cherry.png",
     "waterfall.png",
-    "bob-stefan-acidic.png",
+    // "bob-stefan-acidic.png",
     // "corgi_portal.png",
 ]

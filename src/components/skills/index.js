@@ -66,7 +66,7 @@ const skills = () => {
     class: styles.skills, 
   }, skillgroups.map(([ title, skills ]) => {
     return ['ul', [
-      ['h4', title],
+      ['li', { class: styles.title }, title],
       ...skills.map(skill => ['li', skill]),
     ]]
   })]

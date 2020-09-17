@@ -2,7 +2,7 @@ import { template, link } from 'bitt'
 
 import styles from './landing.scss'
 
-import appleImage from '@/assets/lowpoly_apple_transparent.png'
+import appleImage from '@/assets/lowpoly_apple_transparent.webp'
 
 import gamejoltSVG from 'icons/gamejolt.svg'
 import githubSVG from 'icons/github.svg'
@@ -25,10 +25,10 @@ const landing = ['div', {
       ['div', {
         class: styles.social,
       }, [
-        ['a', { href: 'https://github.com/Andr3wRiv3rs' }, [template(githubSVG)]],
-        ['a', { href: 'https://soundcloud.com/poison_apple' }, [template(soundcloudSVG)]],
-        ['a', { href: 'https://gamejolt.com/@AndrewRivers' }, [template(gamejoltSVG)]],
-        ['a', { href: 'https://www.twitch.tv/andr3wriv3rs' }, [template(twitchSVG)]],
+        ['a', { href: 'https://github.com/Andr3wRiv3rs', title: 'GitHub' }, [template(githubSVG)]],
+        ['a', { href: 'https://soundcloud.com/poison_apple', title: 'SoundCloud' }, [template(soundcloudSVG)]],
+        ['a', { href: 'https://gamejolt.com/@AndrewRivers', title: 'GameJolt' }, [template(gamejoltSVG)]],
+        ['a', { href: 'https://www.twitch.tv/andr3wriv3rs', title: 'Twitch' }, [template(twitchSVG)]],
       ]],
       ['p', [
         'Poison Apple#9351', 

@@ -92,7 +92,7 @@ module.exports = () => ({
     chunkFilename: '[name].bundle.js',
   },
 
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'development' ? 'source-map' : 'none',
 
   devServer: {
     port: 3000,

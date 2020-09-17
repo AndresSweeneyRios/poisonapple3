@@ -2,6 +2,7 @@ export default {
   corgi_stack_3d: {
     title: "Corgi Stack 3D",
     id: "corgi_stack_3d",
+    thumbnail: "corgi_stack_3d.png",
 
     description: `
       Sequel to [my entry](https://jams.gamejolt.io/corgsmas/games/corgi-stack/218872) for the [Corgsmas](https://jams.gamejolt.io/corgsmas/games) game jam, Corgi Stack 3D is a 
@@ -47,6 +48,7 @@ export default {
   bitt: {
     title: 'bitt',
     id: 'bitt',
+    thumbnail: "bitt.webp",
 
     description: `Bitt is an extremely lightweight (~5kb) zero dependency reactive JavaScript framework.`,
 
@@ -69,6 +71,7 @@ export default {
   kismet: {
     title: "Kismet",
     id: "kismet",
+    thumbnail: "kismet.webp",
 
     description: "An unannounced surreal horror project.",
 
@@ -103,6 +106,7 @@ export default {
   firefight: {
     title: "Firefig.ht",
     id: 'firefight',
+    thumbnail: "firefight.webp",
 
     screenshots: [
       1,2,3,1,2,3
@@ -125,6 +129,7 @@ export default {
   'webdevs.work': {
     title: "webdevs.work",
     id: "webdevs.work",
+    thumbnail: "webdevs.work.webp",
 
     description: "A job board dedicated to web developers.",
 
@@ -143,6 +148,7 @@ export default {
   malus: {
     title: "Malus",
     id: "malus",
+    thumbnail: "malus.png",
 
     description: `
       A UPnP portmapper, built using [my wrapper](https://www.npmjs.com/package/nat-upnp-wrapper) 
@@ -162,6 +168,7 @@ export default {
   yaaiia: {
     title: "YaaiiA",
     id: "yaaiia",
+    thumbnail: "yaaiia.webp",
 
     description: `
       Short for "Yet another alien invasion in Atlanta", 
@@ -203,6 +210,7 @@ export default {
   fos: {
     title: "FOS",
     id: "fos",
+    thumbnail: "fos.png",
 
     description: "A self-hosted end-to-end encrypted chat platform.",
 
@@ -221,6 +229,7 @@ export default {
   simple_webrtc: {
     title: "Simple WebRTC",
     id: "simple_webrtc",
+    thumbnail: "simple_webrtc.png",
 
     description: `
       A library written in JavaScript aimed at making WebRTC dead simple.
@@ -241,6 +250,7 @@ export default {
   apples_cards: {
     title: "Apple's Cards",
     id: 'apples_cards',
+    thumbnail: "apples_cards.png",
 
     left: true,
 
@@ -261,6 +271,7 @@ export default {
   stardust: {
     title: "Stardust",
     id: "stardust",
+    thumbnail: "stardust.webp",
 
     description: "A publisher toolset in an Electron client using [Stardust](https://www.stardust.gg/)'s blockchain technologies.",
 
@@ -272,6 +283,7 @@ export default {
   mere_mercy: {
     title: "Mere Mercy",
     id: "mere_mercy",
+    thumbnail: "mere_mercy.webp",
 
     description: "Mere Mercy is a Zombie Survival game for Android, built in Unity.",
 

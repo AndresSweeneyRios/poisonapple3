@@ -10,6 +10,14 @@ html( lang="en" )
     link( rel="preload" href=require('@/assets/fonts/manrope.woff2') as="font" type="font/woff2" crossorigin )
     link( rel="preload" href=require('@/assets/fonts/manrope-bold.woff2') as="font" type="font/woff2" crossorigin )
 
+    link( rel="preload" href=require('@/assets/background.webp') as="image" )
+
+    //- each image in require('@/assets/gallery').default
+    //-   link( rel="prefetch" href=require("@/assets/gallery/" + image) as="image" )
+
+    each project in Object.values(require('@/assets/projects').default)
+      link( rel="prefetch" href=require("@/assets/projects/" + project.thumbnail) as="image" )
+
     meta( name="theme-color" content=require('config').meta.themeColor )
 
     meta( property="og:url" content=require('config').meta.url )

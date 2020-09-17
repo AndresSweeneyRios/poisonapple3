@@ -29,12 +29,8 @@ marked.setOptions({
 
 const thumbnails = {}
 
-for (const key in projectList) {
-  try {
-    thumbnails[key] = require(`@/assets/projects/${key}.webp`)
-  } catch (error) {
-    thumbnails[key] = require(`@/assets/projects/${key}.png`)
-  }
+for (const { thumbnail, id } of Object.values(projectList)) {
+  thumbnails[id] = require(`@/assets/projects/${thumbnail}`)
 }
 
 const getIcon = (type) => {
@@ -74,12 +70,13 @@ const projects = () => {
   }) => {
     return ['div', {
       class: styles[id] || '',
-      id: 'skills',
     }, [
       ['img', {
         style: {
           objectPosition: left ? 'left center' : 'center center',
         },
+
+        'aria-hidden': 'true',
 
         src: thumbnails[id]
       }],
@@ -93,7 +90,7 @@ const projects = () => {
             type,
             url,
           }) => {
-            return ['a', { href: url, type }, [template(getIcon(type))]]
+            return ['a', { href: url, title: type, type }, [template(getIcon(type))]]
           }),
         ]],
         template(marked(description.replace(/^\s+|\s+$/, ''))),
@@ -107,9 +104,9 @@ const projects = () => {
             }],
 
             ['p',{ 
-              style: {
+              // style: {
                 // color: badgeColors[badge],
-              }
+              // }
             }, badge],
           ]],
         )],
