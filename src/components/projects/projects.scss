@@ -59,7 +59,7 @@
   }
 
   > div {
-    height: 42vh;
+    height: calc(22vh + 10vw);
   }
 
   @include md {
@@ -67,11 +67,11 @@
     flex-direction: column;
 
     .corgi_stack_3d {
-      height: 50vh;
+      height: calc(25vh + 10vw);
     }
 
     > div {
-      height: 50vh;
+      height: calc(25vh + 10vw);
     }
   }
 
@@ -131,9 +131,12 @@
       flex-wrap: wrap;
       align-items: center;
       
+      a {
+        margin-left: 10px;
+      }
+
       svg {
         height: 32px;
-        margin-left: 10px;
       }
 
       a[type=npm] > svg {

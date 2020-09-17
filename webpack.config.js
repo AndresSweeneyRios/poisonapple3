@@ -1,10 +1,20 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = () => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.pug'
+    }),
+
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: '', 
+        },
+      ],
     }),
   ],
 
@@ -28,7 +38,15 @@ module.exports = () => ({
         ],
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+        test: /\.css$/i,
+        use: [
+          // 'raw-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|webp|gif|woff|woff2|eot|ttf|otf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -57,6 +75,7 @@ module.exports = () => ({
       'scss': path.resolve(__dirname, 'src', 'sass'),
       'assets': path.resolve(__dirname, 'src', 'assets'),
       'icons': path.resolve(__dirname, 'src', 'assets', 'icons'),
+      '~': path.resolve(__dirname, 'src'),
     },
     extensions: ['.js'],
   },

@@ -5,12 +5,14 @@
     "serve": "node serve"
   },
   "dependencies": {
+    "bitt": "^0.2.2",
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "marked": "^1.1.1",
     "prismjs": "^1.21.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^6.1.0",
     "css-loader": "^4.3.0",
     "dart-sass": "^1.25.0",
     "file-loader": "^6.0.0",

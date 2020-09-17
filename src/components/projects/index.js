@@ -30,7 +30,11 @@ marked.setOptions({
 const thumbnails = {}
 
 for (const key in projectList) {
-  thumbnails[key] = require(`@/assets/projects/${key}/${key}.png`)
+  try {
+    thumbnails[key] = require(`@/assets/projects/${key}.webp`)
+  } catch (error) {
+    thumbnails[key] = require(`@/assets/projects/${key}.png`)
+  }
 }
 
 const getIcon = (type) => {
@@ -70,6 +74,7 @@ const projects = () => {
   }) => {
     return ['div', {
       class: styles[id] || '',
+      id: 'skills',
     }, [
       ['img', {
         style: {

@@ -2,7 +2,7 @@ import styles from './carousel.scss'
 import gallery from '@/assets/gallery'
 
 const mappedGallery = gallery.map((path) => {
-  const src = require(`@/assets/gallery/${path}.png`)
+  const src = require(`@/assets/gallery/${path}`)
   const img = document.createElement('img')
   
   img.src = src
