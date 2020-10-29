@@ -1,29 +1,6 @@
 import styles from './skills.scss'
 
 const skillgroups = [
-  ['Frontend', [
-    "Sass",
-    "Stylus",
-    "WebRTC",
-    "Electron",
-    "jQuery",
-    "Webpack",
-    "Tailwind",
-    "Vuetify",
-    "Bootstrap",
-  ]],
-
-  ['Backend', [
-    "Express.js",
-    "Koa",
-    "MongoDB",
-    "MySQL",
-    "NGINX",
-    "Stripe",
-    "Mollie",
-    "Discord.js",
-  ]],
-  
   ['Languages', [
     "JavaScript",
     "TypeScript",
@@ -32,14 +9,62 @@ const skillgroups = [
     "GML",
   ]],
 
-  ['Frameworks', [
-    "Express",
-    "Phonegap / Cordova",
+  ['Frontend', [
     "Vue.js",
-    "Nuxt.js",
     "React",
-    "Next.js",
-    "Preact",
+    "WebRTC",
+    "Electron",
+    "jQuery",
+    "Webpack",
+    "Parcel",
+    "Phonegap",
+  ]],
+
+  ['Styles', [
+    "PostCSS",
+    "Tailwind",
+    "Vuetify",
+    "Bootstrap",
+    "Bulma",
+    "Sass",
+    "Stylus",
+  ]],
+
+  ['Backend', [
+    "WebSockets",
+    "Express.js",
+    "Koa",
+    "MongoDB",
+    "NGINX",
+    "Discord.js",
+    "Stripe",
+    "Mollie",
+    "Paypal API",
+  ]],
+
+  ['Design', [
+    "Figma",
+    "Blender",
+    "MagicaVoxel",
+    "Photoshop",
+    "Inkscape",
+  ]],
+
+  ['DevOps', [
+    "Docker",
+    "Kubernetes",
+    "Github Actions",
+    "DigitalOcean",
+    "Firebase",
+    "AWS",
+  ]],
+
+  ['Crypto', [
+    "Bitcoin",
+    "Ethereum",
+    "Web3.js",
+    "BlockCypher",
+    "Blocknative",
   ]],
 
   ['Gamedev', [
@@ -49,14 +74,6 @@ const skillgroups = [
     "Construct 2",
     "PixiJS",
     "Three.js",
-  ]],
-
-  ['Graphics', [
-    "Blender",
-    "MagicaVoxel",
-    "Photoshop",
-    "Figma",
-    "Inkscape",
   ]],
 ]
 

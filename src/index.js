@@ -1,10 +1,6 @@
 import '@/scss/global.scss'
 
-import { router } from 'bitt'
+import { mount } from 'bitt'
+import Home from '@/views/home'
 
-router(document.body, [
-  {
-    regex: /^\/?$/,
-    module: () => import('@/views/home')
-  }
-]).catch(console.error)
+mount(document.body, Home)

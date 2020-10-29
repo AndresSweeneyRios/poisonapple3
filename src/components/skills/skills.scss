@@ -11,17 +11,19 @@
   // padding-top: 0;
 
   display: grid;
-  grid-template-columns: repeat(6, 200px);
-  grid-gap: 30px 90px;
+  grid-template-columns: repeat(7, 200px);
+  grid-gap: 60px 0px;
   justify-items: center;
   justify-content: center;
+  align-content: center;
 
   @media (max-width: 1700px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(4, 200px);
   }
 
-  @include md {
-    grid-template-columns: repeat(2, 200px);
+  @media (max-width: 900px) {
+    padding: 60px 0;
+    grid-template-columns: repeat(3, 200px);
   }
 
   @media (max-width: 650px) {
@@ -53,12 +55,4 @@
       margin-top: 5px;
     }
   }
-
-  @media (max-width: 900px) {
-    padding: 20px;
-
-    ul {
-      padding-left: 0;
-    }
-  } 
 }
