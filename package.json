@@ -7,7 +7,7 @@
   "dependencies": {
     "bitt": "^0.2.2",
     "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "marked": "^1.1.1",
     "prismjs": "^1.21.0"
   },
